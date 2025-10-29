@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Вэб Загвар</title>
+  <style>
+    /* ---------- Үндсэн тохиргоо ---------- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f2f5f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #1e90ff;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #0d6efd;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: block;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #1e90ff;
+    }
+
+    /* ---------- Гол хэсэг ---------- */
+    main {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      color: #1e90ff;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #1e90ff;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #0d6efd;
+    }
+
+    footer {
+      background-color: #1e90ff;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    /* ---------- Responsive тохиргоо ---------- */
+    @media (max-width: 1024px) {
+      main {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 20px;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      main {
+        grid-template-columns: 1fr;
+        padding: 20px;
+      }
+
+      .card {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Responsive Вэб Загвар</h1>
+    <p>Бүх төрлийн дэлгэцэнд автоматаар тохирно</p>
+  </header>
+
+  <nav>
+    <a href="#">Нүүр</a>
+    <a href="#">Бидний тухай</a>
+    <a href="#">Үйлчилгээ</a>
+    <a href="#">Холбоо барих</a>
+  </nav>
+
+  <main>
+    <div class="card">
+      <h2>Онцлог 1</h2>
+      <p>Энэ вэб загвар нь дэлгэцийн хэмжээнд автоматаар таардаг.</p>
+      <button>Дэлгэрэнгүй</button>
+    </div>
+
+    <div class="card">
+      <h2>Онцлог 2</h2>
+      <p>CSS Grid болон Media Query ашигласан бүтэцтэй.</p>
+      <button>Унших</button>
+    </div>
+
+    <div class="card">
+      <h2>Онцлог 3</h2>
+      <p>Орчин үеийн өнгө, минимал дизайнтай загвар.</p>
+      <button>Илүү үзэх</button>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Responsive Вэб Загвар. Бүх эрх хуулиар хамгаалагдсан.
+  </footer>
+</body>
+</html>
